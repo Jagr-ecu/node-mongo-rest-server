@@ -58,7 +58,7 @@ const userDelete = async(req = request, res = response) => {
     //Se actualiza el campo de estado a false, no se borra fisicamente
     const usuario = await User.findByIdAndUpdate(id, {state: false})
 
-    res.status(201).json({
+    res.status(200).json({
         usuario
     })
 }
